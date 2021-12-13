@@ -1,0 +1,228 @@
+/* Font Load */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: "Sporting Grotesque Regular", sans-serif;
+    src: url("../fonts/Sporting_Grotesque-Regular_web.woff2") format("woff2");
+    src: url("../fonts/Sporting_Grotesque-Regular_web.woff") format("woff");
+    font-weight: 400;
+}
+
+/*
+font-family: 'Readex Pro', sans-serif; 300, 400, 700
+font-family: 'Inter', sans-serif; 300, 400, 700
+font-family: 'ab-neuron", sans-serif, 400 
+    link: https://fonts.adobe.com/fonts/ab-neuron#fonts-section
+*/
+
+/* Typography */
+h1, h3 {
+    font-family: ab-neuron, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+h1 {
+    font-size: 3.5em;
+    margin-bottom: .75em;
+}
+h3 {
+    font-size: 2em;
+}
+h4 {
+    font-family: Readex Pro, sans-serif;
+    font-weight: 300;
+}
+h2, p, a {
+    font-family: Readex Pro, sans-serif;
+    font-weight: 400;
+}
+h2, nav a {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-decoration: none;
+}
+h2 {
+    margin-bottom: .5em;
+}
+h4, p {
+    font-size: 1em;
+}
+h4 {
+    line-height: 2em;
+    margin-bottom: .75em;
+}
+p {
+    line-height: 1.2em;
+    margin-bottom: 2em;
+}
+footer p {
+    color: white;
+    padding-left: 12em;
+}
+a {
+    color:black;
+}
+a:hover {
+    color: #a0d0ca;
+}
+a:active {
+    color: #a0d0ca;
+}
+
+/* Layout */
+body {
+    background-color: whitesmoke;
+}
+header, footer {
+    background-color: black;
+    padding: 3em;
+}
+nav {
+    padding-top: 2em;
+    padding-left: 12em;
+    padding-right: 12em;
+    padding-bottom: 4em;
+}
+.center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-content {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.header-logo {
+    width: 10%;
+}
+.footer-logo {
+    width: 5%;
+    margin-bottom: 1em;
+}
+.logomark {
+    width: 6%;
+}
+
+/* General */
+.long-paragraph {
+    padding-right: 50%;
+    margin-bottom: 5em;
+}
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing-image {
+    width: 100%;
+    height: 50em;
+    object-fit: cover;
+    margin-bottom: 8em;
+}
+.profiles {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5em;
+}
+.employee-card {
+    flex: 1;
+}
+.employee-image {
+    object-fit: cover;
+    height: 40em;
+    filter: blur(5px);
+    transition-duration: 0.5s;
+    transition: all .5s ease-out;
+    padding-bottom: 2em;
+}
+.employee-image:hover {
+    filter: blur(0);
+    transition-duration: 0.5s;
+    transition: all .5s ease-out;
+}
+.news {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
+}
+.press-card {
+    width: 50%;
+    margin-bottom: 1em;
+}
+.press-image {
+    width: 10em;
+    height: 10em;
+}
+.event-card {
+    width: 100%;
+    margin-bottom: 1em;
+}
+.event-image {
+    width: 50%;
+    height: 20em;
+    object-fit: cover;
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotate {
+    animation: rotate 3s linear infinite;
+}
+
+/* Media Queries */
+@media screen and (max-width: 50em) {
+    /* Typography */ 
+    h1 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h2, nav a {
+        font-size: 1.2em;
+    }
+    h4, p {
+        font-size: 1em;
+    }
+    nav a {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    /* Layout */ 
+    footer {
+        padding-left: 0em;
+    }
+    .main-content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .header-logo {
+        width: 35%;
+    }
+    .footer-logo {
+        width: 35%;
+    }
+    .logomark {
+        width: 50%;
+    }
+
+    /* General */
+    .long-paragraph {
+        padding-right: 0%;
+    }
+    .profiles {
+        flex-direction: column;
+    }
+    .employee-image {
+        width: 100%;
+        height: 20em;
+    }
+}
